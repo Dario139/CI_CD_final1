@@ -31,6 +31,11 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1      
 
+      - name: subirS3
+        run: |
+          aws s3api list-buckets
+          aws s3 cp utils.py s3://bdjdv/
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
