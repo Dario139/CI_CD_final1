@@ -34,7 +34,7 @@ jobs:
       - name: subirS3
         run: |
           aws s3api list-buckets
-          aws s3 cp utils.py s3://bdjdv/
+          aws s3 cp utils.py s3://basebucket13/
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
